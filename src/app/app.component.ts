@@ -29,33 +29,35 @@ export class AppComponent {
         const document = {
             defaultStyle: { fontSize: 7 },
             content: [
-                this.buildTable(customers, ['id', 'description'])
-            ],
-            styles: {
-                defaultStyle: {
-                    font: 'Ubuntu Condensed'
+                {
+                    table: {
+                        body: [
+                            ['Id', 'Description', 'RefNo'],
+                            ['a1', 'a2', 'a3'],
+                            [
+                                [],
+                                [
+                                    {
+                                        table: {
+                                            body: [
+                                                ['Street', 'No'],
+                                                ['s1', 'n1']
+                                            ]
+                                        }
+                                    }
+                                ],
+                                []
+                            ],
+                            ['b1', 'b2', 'c2'],
+                            ['c1', 'c2', 'f2'],
+                        ]
+                    }
                 }
-            }
+            ]
         }
 
         pdfMake.createPdf(document).open()
 
-    }
-
-    private buildTable(data: Customer[], columns: any[]): any {
-        return {
-            table: {
-                headerRows: 1,
-                dontBreakRows: true,
-                body: this.buildTableBody(data, columns),
-                heights: 10,
-                bold: false,
-                style: 'table',
-                layout: 'noBorders',
-                widths: ['20%', '80%'],
-            },
-            layout: 'lightHorizontalLines'
-        }
     }
 
     private buildTableBody(data: Customer[], columns: any[]): void {
@@ -66,7 +68,6 @@ export class AppComponent {
             dataRow = this.processRow(columns, row, dataRow)
             console.log('row', row)
             body.push(dataRow)
-            
             // body.push(this.createInnerTableHeaders())
             for (let index = 0; index < row.addresses.length; index++) {
                 console.log(row.addresses[index])
@@ -112,6 +113,5 @@ export class AppComponent {
             { text: 'Street', style: 'tableHeader', alignment: 'center', bold: false },
         ]
     }
-
 
 }
