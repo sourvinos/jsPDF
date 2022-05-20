@@ -12,106 +12,97 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs
 
 export class AppComponent {
 
+    private customers: Customer[] = [
+        { 'id': 1, 'description': 'MOBY DICK', 'addresses': [{ 'street': 'Street A' }, { 'street': 'Street B' }] },
+        { 'id': 2, 'description': 'SANDY', 'addresses': [{ 'street': 'Street C' }] },
+        { 'id': 3, 'description': 'BANDOS TRAVEL', 'addresses': [{ 'street': 'Street D' }, { 'street': 'Street E' }] },
+        { 'id': 4, 'description': 'CTS', 'addresses': [] },
+        { 'id': 5, 'description': 'HELLENIC', 'addresses': [{ 'street': 'Street F' }, { 'street': 'Street G' }] },
+        { 'id': 6, 'description': 'TUI', 'addresses': [{ 'street': 'Street H' }] },
+        { 'id': 7, 'description': 'BENITSES TRAVEL', 'addresses': [{ 'street': 'Street J' }, { 'street': 'Street BA' }] },
+        { 'id': 8, 'description': 'KAFESAS', 'addresses': [{ 'street': 'Street EASY' }] },
+        { 'id': 9, 'description': 'AKVILA', 'addresses': [{ 'street': 'Street EURO' }, { 'street': 'YUI' }] },
+    ]
+
     public createPDF(): void {
-
-        const customers: Customer[] = [
-            { 'id': 1, 'description': 'MOBY DICK', 'addresses': [{ 'street': 'Street A' }, { 'street': 'Street B' }] },
-            { 'id': 2, 'description': 'SANDY', 'addresses': [{ 'street': 'Street C' }] },
-            { 'id': 3, 'description': 'BANDOS TRAVEL', 'addresses': [{ 'street': 'Street D' }, { 'street': 'Street E' }] },
-            { 'id': 4, 'description': 'CTS', 'addresses': [] },
-            { 'id': 5, 'description': 'HELLENIC', 'addresses': [{ 'street': 'Street F' }, { 'street': 'Street G' }] },
-            { 'id': 6, 'description': 'TUI', 'addresses': [{ 'street': 'Street H' }] },
-            { 'id': 7, 'description': 'BENITSES TRAVEL', 'addresses': [{ 'street': 'Street J' }, { 'street': 'Street BA' }] },
-            { 'id': 8, 'description': 'KAFESAS', 'addresses': [{ 'street': 'Street EASY' }] },
-            { 'id': 9, 'description': 'AKVILA', 'addresses': [{ 'street': 'Street EURO' }, { 'street': 'YUI' }] },
-        ]
-
         const document = {
             defaultStyle: { fontSize: 7 },
-            content: [
-                {
-                    table: {
-                        body: [
-                            ['Id', 'Description', 'RefNo'],
-                            ['a1', 'a2', 'a3'],
-                            [
-                                [],
-                                [
-                                    {
-                                        table: {
-                                            body: [
-                                                ['Street', 'No'],
-                                                ['s1', 'n1']
-                                            ]
-                                        }
-                                    }
-                                ],
-                                []
-                            ],
-                            ['b1', 'b2', 'c2'],
-                            ['c1', 'c2', 'f2'],
-                        ]
-                    }
-                }
-            ]
+            content:
+                [
+                    this.table(this.customers,
+                        ['', ''],
+                        ['id', 'description', 'addresses'],
+                        ['center', 'left', 'any'])
+                ]
         }
-
         pdfMake.createPdf(document).open()
+    }
+
+    private table(data: Customer[], columnTypes: any[], columns: any[], align: any[]): any {
+        return {
+            table: {
+                headerRows: 1,
+                dontBreakRows: true,
+                body: this.buildTableBody(data, columnTypes, columns, align),
+                heights: 10,
+                bold: false,
+                style: 'table',
+                layout: 'noBorders',
+                widths: [20, 80, 50, 50, 40, '10%', '10%', 50, 60],
+            },
+            layout: {
+                vLineColor: function (i: number, node: { table: { widths: string | any[] } }): any { return (i === 1 || i === node.table.widths.length - 1) ? '#dddddd' : '#dddddd' },
+                vLineStyle: function (): any { return { dash: { length: 50, space: 0 } } },
+                paddingTop: function (i: number): number { return (i === 0) ? 5 : 5 },
+                paddingBottom: function (): number { return 2 }
+            }
+        }
 
     }
 
-    private buildTableBody(data: Customer[], columns: any[]): void {
+    private buildTableBody(data: Customer[], columnTypes: any[], columns: any[], align: any[]): void {
         const body: any = []
-        body.push(this.createTableHeaders())
-        data.forEach((row: any) => {
+        data.forEach((row) => {
             let dataRow = []
-            dataRow = this.processRow(columns, row, dataRow)
-            console.log('row', row)
+            dataRow = this.processRow(columnTypes, columns, row, dataRow, align)
             body.push(dataRow)
-            // body.push(this.createInnerTableHeaders())
-            for (let index = 0; index < row.addresses.length; index++) {
-                console.log(row.addresses[index])
-            }
         })
         return body
     }
 
-    private createTableHeaders(): any[] {
-        return [
-            { text: 'Id', style: 'tableHeader', alignment: 'center', bold: false },
-            { text: 'Description', style: 'tableHeader', alignment: 'center', bold: false },
-        ]
-    }
-
-    private processRow(columns: any[], row: any, dataRow: any[]): any {
-        columns.forEach((element) => {
-            if (element != undefined) {
-                dataRow.push({ text: row[element], noWrap: false })
+    private processRow(columnTypes: any[], columns: any[], row: Customer, dataRow: any[], align: any[]): any {
+        // console.log('row', row)
+        columns.forEach((element, index) => {
+            // console.log('element', element)
+            if (element != 'addresses') {
+                dataRow.push({ text: this.formatField(columnTypes[index], row[element]), alignment: align[index].toString(), color: '#000000', noWrap: false })
+            } else {
+                dataRow.push(this.processAddresses(row.addresses))
+                // console.log('Addresses', row.addresses)
+                // row.addresses.forEach(address => {
+                //     console.log(address)
+                //     dataRow.push({ text: address.street })
+                // })
             }
         })
         return dataRow
     }
 
-    private buildInnerTableBody(data: Address[], columns: any[]): void {
-        // console.log(data)
-        const body: any = []
-        body.push(this.createInnerTableHeaders())
-        data.forEach((row: any) => {
-            // console.log('processing addresses', row.addresses)
-            let dataRow = []
-            dataRow = this.processRow(columns, row, dataRow)
-            body.push(dataRow)
-            row.addresses.forEach((element: any) => {
-                // console.log('element', element)
-            })
+    private processAddresses(addresses: Address[]): any {
+        const addressRow = []
+        addresses.forEach(address => {
+            addressRow.push({ text: address.street })
         })
-        return body
+        return addressRow
     }
 
-    private createInnerTableHeaders(): any[] {
-        return [
-            { text: 'Street', style: 'tableHeader', alignment: 'center', bold: false },
-        ]
+    private formatField(type: any, field: string | number | Date): string {
+        switch (type) {
+            case 'date':
+                return field.toString()
+            default:
+                return field != undefined ? field.toString() : ''
+        }
     }
 
 }
