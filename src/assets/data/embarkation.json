@@ -8,7 +8,7 @@
         {
             "refNo": "PA172",
             "ticketNo": "BERTHELOT- CLER",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "MAN CAN  003",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -43,7 +43,7 @@
             "customer": "GET YOUR GUIDE",
             "driver": "-",
             "ship": "CAPTAIN BILL",
-            "totalPersons": 2,
+            "totalPersons": 112,
             "passengerIds": [
                 1387,
                 1388
@@ -70,7 +70,7 @@
         {
             "refNo": "PA186",
             "ticketNo": "GYG-MG5",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "GET YOUR GUIDE",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -123,7 +123,7 @@
         {
             "refNo": "PA207",
             "ticketNo": "GYG-52Y",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "GET YOUR GUIDE",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -135,7 +135,7 @@
             "passengers": [
                 {
                     "id": 1513,
-                    "lastname": " Sulkowski ",
+                    "lastname": "Sulkowski ",
                     "firstname": "Jessica",
                     "nationalityCode": "fr",
                     "nationalityDescription": "FRANCE",
@@ -185,7 +185,7 @@
         {
             "refNo": "PA293",
             "ticketNo": "CH-NQLUYZ",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "CHECK YETI",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -238,7 +238,7 @@
         {
             "refNo": "PA325",
             "ticketNo": "Γ3",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "MARIA'S TOURIST SERV.",
             "driver": "CHARITOS BUS ",
             "ship": "CAPTAIN BILL",
@@ -300,7 +300,7 @@
         {
             "refNo": "PA345",
             "ticketNo": "Let's Book 878876130",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "LET'S BOOK TRAVEL ",
             "driver": "STAMATIS METALLINOS",
             "ship": "CAPTAIN BILL",
@@ -362,7 +362,7 @@
         {
             "refNo": "PA349",
             "ticketNo": "DLJL7",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "GRECA ",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -393,7 +393,7 @@
         {
             "refNo": "PA351",
             "ticketNo": "006 VANA WILSON",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "CORFU HOLIDAY PALACE 006",
             "driver": "STAMATIS METALLINOS",
             "ship": "CAPTAIN BILL",
@@ -414,7 +414,7 @@
                 },
                 {
                     "id": 2022,
-                    "lastname": " EBANKS-WILSON",
+                    "lastname": "EBANKS-WILSON",
                     "firstname": "KIERA",
                     "nationalityCode": "gb-eng",
                     "nationalityDescription": "ENGLAND",
@@ -433,7 +433,7 @@
         {
             "refNo": "PA355",
             "ticketNo": "Aythinos Teo",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "PANDIS FAMILY CRUISES",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -455,7 +455,7 @@
         {
             "refNo": "PA357",
             "ticketNo": "AM29",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "CHARITOS TRAVEL",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -486,7 +486,7 @@
         {
             "refNo": "PA358",
             "ticketNo": "AM11",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "CHARITOS TRAVEL",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -499,7 +499,7 @@
             "passengers": [
                 {
                     "id": 2144,
-                    "lastname": "KOTACINSKI",
+                    "lastname": "VERY LONG LASTNAME",
                     "firstname": "JAKUB",
                     "nationalityCode": "pl",
                     "nationalityDescription": "POLAND",
@@ -526,7 +526,7 @@
         {
             "refNo": "PA359",
             "ticketNo": "AM21",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "CHARITOS TRAVEL",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -536,6 +536,14 @@
                 2141
             ],
             "passengers": [
+                {
+                    "id": 2140,
+                    "lastname": "SMITH",
+                    "firstname": "SAMANTHA",
+                    "nationalityCode": "pl",
+                    "nationalityDescription": "POLAND",
+                    "isCheckedIn": true
+                },
                 {
                     "id": 2140,
                     "lastname": "KRASUSKA",
@@ -557,7 +565,7 @@
         {
             "refNo": "PA360",
             "ticketNo": "AM17",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "CHARITOS TRAVEL",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -588,7 +596,7 @@
         {
             "refNo": "PA361",
             "ticketNo": "AM14",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS12345",
             "customer": "CHARITOS TRAVEL",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -637,7 +645,7 @@
         {
             "refNo": "PA362",
             "ticketNo": "BK5",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "CHARITOS TRAVEL",
             "driver": "-",
             "ship": "CAPTAIN BILL",
@@ -668,7 +676,7 @@
         {
             "refNo": "PA378",
             "ticketNo": "4",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "CORFU COMPASS NSK",
             "driver": "STAMATIS METALLINOS",
             "ship": "CAPTAIN BILL",
@@ -690,7 +698,7 @@
         {
             "refNo": "PA380",
             "ticketNo": "B 4330",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "DANAOS BLUE TRAVEL ",
             "driver": "ROVENA NORTH",
             "ship": "CAPTAIN BILL",
@@ -739,7 +747,7 @@
         {
             "refNo": "PA382",
             "ticketNo": "M 600",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "DANAOS BLUE TRAVEL ",
             "driver": "ROVENA NORTH",
             "ship": "CAPTAIN BILL",
@@ -788,7 +796,7 @@
         {
             "refNo": "PA383",
             "ticketNo": "B 4331",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "DANAOS BLUE TRAVEL ",
             "driver": "ROVENA NORTH",
             "ship": "CAPTAIN BILL",
@@ -850,7 +858,7 @@
         {
             "refNo": "PA395",
             "ticketNo": "gygvn4449vvr",
-            "remarks": "",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "GET YOUR GUIDE",
             "ship": "CAPTAIN BILL",
             "totalPersons": 3,
@@ -889,7 +897,7 @@
         {
             "refNo": "PA396",
             "ticketNo": "REP CHARITOS",
-            "remarks": "FREE REP CHARITOS",
+            "remarks": "FREE REP CHARITOS FREE REP CHARITOS FREE REP CHARITOS",
             "customer": "PANDIS FAMILY CRUISES",
             "ship": "CAPTAIN BILL",
             "totalPersons": 1,

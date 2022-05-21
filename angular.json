@@ -17,6 +17,9 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
+                        "allowedCommonJsDependencies": [
+                            "jspdf"
+                        ],
                         "outputPath": "dist/js-pdf",
                         "index": "src/index.html",
                         "main": "src/main.ts",

@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve --ssl --ssl-cert ssl\\server.crt --ssl-key ssl\\server.key",
+        "start": "ng serve --port 4300 --ssl --ssl-cert ssl\\server.crt --ssl-key ssl\\server.key",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test"
@@ -18,8 +18,8 @@
         "@angular/platform-browser": "13.2.0",
         "@angular/platform-browser-dynamic": "13.2.0",
         "@angular/router": "13.2.0",
+        "guid-typescript": "1.0.9",
         "jspdf": "2.5.1",
-        "pdfmake": "0.2.4",
         "rxjs": "7.5.5",
         "tslib": "2.3.1",
         "zone.js": "0.11.5"
@@ -30,7 +30,6 @@
         "@angular/compiler-cli": "13.2.0",
         "@types/leaflet": "1.7.9",
         "@types/leaflet.markercluster": "1.4.6",
-        "@types/pdfmake": "0.1.21",
         "@typescript-eslint/eslint-plugin": "5.16.0",
         "@typescript-eslint/parser": "5.16.0",
         "cypress": "9.6.1",
