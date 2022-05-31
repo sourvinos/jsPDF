@@ -5,6 +5,8 @@ import '../assets/fonts/NotoSansMonoCondensedRegular.js'
 import '../assets/fonts/PFHandbookProThin.js'
 import '../assets/fonts/ACCanterBold.js'
 import embarkation from '../assets/data/embarkation.json'
+import Swal from 'sweetalert2'
+
 
 @Component({
     selector: 'app-root',
@@ -151,5 +153,43 @@ export class AppComponent {
             return true
         }
     }
+
+    public saveRecord(): void {
+        const response = 'Ref No is PA452'
+        this.showModal(response)
+    }
+
+    private showModal(response: string): void {
+        Swal.fire({
+            title: 'Ολα καλά!',
+            text: response,
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
+
+    public showError(): void {
+        Swal.fire({
+            title: 'Κάτι δεν πήγε καλά!',
+            text: 'Η αποθήκευση της κράτησης δεν μπορεί να γίνει επειδή έχετε επιλέξει παραλαβή σε μεταφορά σε λιμάνι. Πρέπει να επικοινωνήστε μαζί μας το συντομότερο για διαθεσιμότητα στα λεωφορεία.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            allowEnterKey: false
+        })
+    }
+
+    public showWarning(): void {
+        Swal.fire({
+            title: 'Πρόσεχε!',
+            text: 'Η διαγραφή είναι μόνιμη και για πάντα.',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'I changed my mind',
+            allowEnterKey: false
+        })
+    }
+
 
 }

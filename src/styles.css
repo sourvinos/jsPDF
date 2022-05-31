@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+.swal2-title {
+    font-family: "PF Handbook Pro", sans-serif;
+    font-weight: 500;
+}
+
+.swal2-html-container {
+    font-family: "PF Handbook Pro", sans-serif !important;
+}
+
+.swal2-container.swal2-center > .swal2-popup {
+    background-color: #ffffff;
+}
