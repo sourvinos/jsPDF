@@ -1,11 +1,24 @@
 import { NgModule } from '@angular/core'
-import { RouterModule, Routes } from '@angular/router'
+import { NoPreloading, RouterModule, Routes } from '@angular/router'
+import { AppComponent } from './app.component'
 
-const routes: Routes = []
+const appRoutes: Routes = [
+    { path: '', component: AppComponent },
+]
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    declarations: [],
+    entryComponents: [],
+    imports: [
+        RouterModule.forRoot(appRoutes, {
+            onSameUrlNavigation: 'reload',
+            preloadingStrategy: NoPreloading,
+            useHash: true,
+        })
+    ],
+    exports: [
+        RouterModule
+    ]
 })
 
 export class AppRoutingModule { }
