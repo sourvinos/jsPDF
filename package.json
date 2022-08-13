@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve --ssl --ssl-cert ssl\\localhost+5.pem --ssl-key ssl\\localhost+5-key.pem",
+        "start": "ng serve --port 3200 --ssl --ssl-cert ssl\\localhost+5.pem --ssl-key ssl\\localhost+5-key.pem",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test"
@@ -21,6 +21,7 @@
         "@angular/platform-browser-dynamic": "14.1.0",
         "@angular/router": "14.1.0",
         "guid-typescript": "1.0.9",
+        "jspdf": "2.5.1",
         "pdfmake": "0.2.4",
         "rxjs": "7.5.5",
         "stylelint": "14.6.1",

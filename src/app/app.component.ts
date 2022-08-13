@@ -1,6 +1,5 @@
 import { Component } from '@angular/core'
-import { NewEmbarkationPDFService } from './embarkation/classes/services/new-embarkation-pdf.service'
-import { EmbarkationGroupVM } from './embarkation/classes/view-models/embarkation-group-vm'
+import { NewInvoicingPDFService } from './invoicing/classes/services/new-invoicing-pdf.service'
 
 @Component({
     selector: 'app-root',
@@ -10,12 +9,10 @@ import { EmbarkationGroupVM } from './embarkation/classes/view-models/embarkatio
 
 export class AppComponent {
 
-    public filteredRecords: EmbarkationGroupVM
-
-    constructor(private embarkationPDFService: NewEmbarkationPDFService) { }
+    constructor(private invoicingPDFService: NewInvoicingPDFService) { }
 
     public doReportTasks(): void {
-        this.embarkationPDFService.createPDF()
+        this.invoicingPDFService.createPDF()
     }
 
 }
