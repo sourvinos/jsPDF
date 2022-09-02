@@ -1,20 +1,16 @@
-.button-big {
-    border-radius: 8px;
-    border: 1px solid #dadce0;
-    padding: 1rem;
-    transition: background-color 0.2s ease-in;
+#container {
+    margin: 10rem;
 }
 
-.button-big:hover {
+#path332, #path1202, #path1348, #path1496, #path1646 {
+    transition: all 0.3s;
+}
+
+#path332:hover, #path1202:hover, #path1348:hover, #path1496:hover, #path1646:hover {
     cursor: pointer;
-    background-color: #efefef;
+    fill-opacity: 0.9 !important;
 }
 
-.content {
-    display: flex;
-    align-items: center;
-}
-
-h2 {
-    margin-left: 2rem;
+input[type="number"] {
+    text-align: right;
 }

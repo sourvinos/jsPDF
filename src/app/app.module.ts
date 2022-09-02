@@ -5,21 +5,29 @@ import { BrowserModule } from '@angular/platform-browser'
 import { MatCardModule } from '@angular/material/card'
 import { MatDatepickerModule } from '@angular/material/datepicker'
 import { MatDialogModule } from '@angular/material/dialog'
+import { MatInputModule } from '@angular/material/input'
 import { MatNativeDateModule } from '@angular/material/core'
 import { NgModule } from '@angular/core'
+import { DecimalInputDirective } from './decimal-input.directive'
+import { FormsModule } from '@angular/forms'
+import { InputTabStopDirective } from './input-tab-stop.directive'
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        DecimalInputDirective,
+        InputTabStopDirective
     ],
     imports: [
-        BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
-        MatDatepickerModule,
-        MatNativeDateModule,
+        BrowserModule,
+        FormsModule,
         MatCardModule,
-        MatDialogModule
+        MatDatepickerModule,
+        MatDialogModule,
+        MatInputModule,
+        MatNativeDateModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

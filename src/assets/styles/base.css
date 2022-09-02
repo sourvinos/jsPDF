@@ -1,0 +1,18 @@
+body {
+    /* background-color: darkviolet; */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: -webkit-fill-available;
+    min-height: 100vh;
+    min-height: stretch;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    bottom: 0;
+    position: sticky;
+}
