@@ -23,8 +23,10 @@ export class InputTabStopDirective {
                 for (let i = elements.length; i--;) {
                     if (nextTab > elements.length) { nextTab = 1 }
                     if (+(elements[i].getAttribute('data-tabindex')) === nextTab && !elements[i].getAttribute('disabled')) {
-                        elements[i].focus()
-                        elements[i].select()
+                        setTimeout(() => {
+                            elements[i].focus()
+                            elements[i].select()
+                        }, 50)
                         break
                     }
                 }
@@ -35,8 +37,10 @@ export class InputTabStopDirective {
                 for (let i = elements.length; i--;) {
                     if (previousTab === 0) { previousTab = elements.length }
                     if (+(elements[i].getAttribute('data-tabindex')) === previousTab) {
-                        elements[i].focus()
-                        elements[i].select()
+                        setTimeout(() => {
+                            elements[i].focus()
+                            elements[i].select()
+                        }, 50)
                         break
                     }
                 }

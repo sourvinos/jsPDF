@@ -9,7 +9,7 @@ import { MatInputModule } from '@angular/material/input'
 import { MatNativeDateModule } from '@angular/material/core'
 import { NgModule } from '@angular/core'
 import { DecimalInputDirective } from './decimal-input.directive'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { InputTabStopDirective } from './input-tab-stop.directive'
 
 @NgModule({
@@ -28,6 +28,7 @@ import { InputTabStopDirective } from './input-tab-stop.directive'
         MatDialogModule,
         MatInputModule,
         MatNativeDateModule,
+        ReactiveFormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
