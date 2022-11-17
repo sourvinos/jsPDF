@@ -1,11 +1,12 @@
 body {
-    /* background-color: darkviolet; */
     display: flex;
     flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, ""Segoe UI"", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
     min-height: -webkit-fill-available;
     min-height: 100vh;
     min-height: stretch;
+    padding: 2em;
 }
 
 main {

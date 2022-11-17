@@ -1,0 +1,8 @@
+#path332, #path1202, #path1348, #path1496, #path1646 {
+    transition: all 0.3s;
+}
+
+#path332:hover, #path1202:hover, #path1348:hover, #path1496:hover, #path1646:hover {
+    cursor: pointer;
+    fill-opacity: 0.9 !important;
+}
